@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Injerto Capilar - Jornada Especial Maracaibo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        script: ['Great Vibes', 'cursive'],
+                    },
+                    colors: {
+                        brandBlue: {
+                            light: '#00C2FF',
+                            DEFAULT: '#0052FF',
+                            dark: '#0036B1',
+                        },
+                        brandDark: '#1E1E1E',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #0052FF 0%, #00C2FF 100%); }
+        .text-gradient { background: linear-gradient(135deg, #0052FF 0%, #00C2FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .custom-shadow { box-shadow: 0 10px 30px -10px rgba(0, 82, 255, 0.15); }
+        .pulsing-dot { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- TOP BAR DE URGENCIA -->
+    <div class="bg-red-500 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center sticky top-0 z-50 shadow-md flex items-center justify-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 bg-white rounded-full pulsing-dot"></span>
+        <span>¡ATENCIÓN MARACAIBO! Quedan pocos cupos para la jornada del 14 y 15 de Julio</span>
+    </div>
+
+    <main class="max-w-md md:max-w-2xl mx-auto my-6 px-4 w-full flex-grow">
+        
+        <!-- HEADER -->
+        <div class="bg-white rounded-t-2xl p-6 text-center border-b border-gray-100 flex flex-col items-center justify-center custom-shadow">
+            <div class="flex items-center gap-3">
+                <div class="gradient-bg w-14 h-14 rounded-lg flex items-center justify-center shadow-lg relative">
+                    <span class="font-script text-white text-5xl leading-none select-none translate-y-1">Tu</span>
+                </div>
+                <div class="text-left flex flex-col justify-center relative">
+                    <span class="font-extrabold tracking-[0.25em] text-xs text-brandBlue uppercase leading-none">Injerto</span>
+                    <div class="flex items-end mt-0.5">
+                        <span class="font-serif font-bold italic text-3xl md:text-4xl text-brandDark leading-none select-none">capilar</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 font-medium tracking-widest uppercase mt-4">Restauración Capilar Definitiva</p>
+        </div>
+
+        <!-- HERO BANNER -->
+        <div class="gradient-bg text-white p-6 md:p-8 text-center relative overflow-hidden">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+
+            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">
+                <i class="fa-solid fa-plane-arrival mr-1.5"></i> Especialistas de Caracas en Zulia
+            </span>
+            
+            <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-3 font-serif">
+                ¿Sufres de Calvicie?
+            </h1>
+            <p class="text-white/95 font-medium text-base md:text-lg mb-6 max-w-lg mx-auto leading-relaxed">
+                Recupera tu cabello y tu confianza con expertos de la capital, sin salir de Maracaibo.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 max-w-lg mx-auto text-left">
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                    <div class="text-brandBlue-light text-xl mb-1"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div class="text-xs text-blue-100 uppercase font-semibold">¿Cuándo?</div>
+                    <div class="text-sm font-bold md:text-base">14 y 15 de Julio</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                    <div class="text-brandBlue-light text-xl mb-1"><i class="fa-solid fa-hospital"></i></div>
+                    <div class="text-xs text-blue-100 uppercase font-semibold">¿Dónde?</div>
+                    <div class="text-sm font-bold md:text-base">Clínica Falcón</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE PRUEBA SOCIAL (NUEVA) -->
+        <div class="bg-gray-100 p-6 md:p-8 border-b border-gray-200">
+            <h2 class="text-xl font-bold text-gray-800 mb-2 text-center">Resultados Reales</h2>
+            <p class="text-center text-xs text-gray-500 mb-5">Casos tratados con técnica FUE (Cero cicatrices visibles)</p>
+            <div class="grid grid-cols-2 gap-3">
+                <!-- RECOMENDACIÓN: Reemplaza estas cajas grises por etiquetas <img> con fotos reales de "Antes y Después" de tu cliente -->
+                <div class="bg-gray-300 h-32 rounded-xl flex items-center justify-center overflow-hidden relative shadow-inner">
+                    <span class="text-gray-500 text-sm font-bold z-10">FOTO ANTES/DESPUÉS</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="bg-gray-300 h-32 rounded-xl flex items-center justify-center overflow-hidden relative shadow-inner">
+                    <span class="text-gray-500 text-sm font-bold z-10">FOTO ANTES/DESPUÉS</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE BENEFICIOS -->
+        <div class="bg-white p-6 md:p-8 custom-shadow border-t border-gray-100">
+            <h2 class="text-xl font-bold text-gray-800 mb-5 text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-clipboard-check text-brandBlue"></i> En tu valoración recibirás:
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                    <div class="bg-blue-50 text-brandBlue p-2 rounded-lg mt-1"><i class="fa-solid fa-user-doctor text-sm"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm md:text-base">Evaluación Folicular Digital</h4>
+                        <p class="text-xs md:text-sm text-gray-600">Diagnóstico detallado de tu zona donante mediante microscopía.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="bg-blue-50 text-brandBlue p-2 rounded-lg mt-1"><i class="fa-solid fa-calculator text-sm"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm md:text-base">Diseño de Línea Frontal</h4>
+                        <p class="text-xs md:text-sm text-gray-600">Determinación exacta de la cantidad de folículos requeridos para tu caso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERRAMIENTA INTERACTIVA -->
+        <div class="bg-blue-50/50 p-6 md:p-8 border-y border-gray-100">
+            <h3 class="text-sm font-bold tracking-wider uppercase text-brandBlue text-center mb-1">Diagnóstico Rápido</h3>
+            <h2 class="text-lg font-bold text-gray-800 text-center mb-4">Selecciona tu nivel aproximado de calvicie:</h2>
+            
+            <div class="grid grid-cols-4 gap-2 mb-4" id="alopecia-selector">
+                <!-- Botones idénticos a los tuyos -->
+                <button type="button" onclick="selectNivel(1, 'Leve (Entradas)')" class="nivel-btn bg-white border-2 border-transparent p-2 rounded-xl text-center shadow-sm hover:border-brandBlue transition flex flex-col items-center">
+                    <svg class="w-10 h-10 text-gray-600 mb-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 35 Q50 35 75 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><path d="M25 45 Q50 30 75 45" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>
+                    <span class="text-xs font-bold text-gray-700">Nivel I</span>
+                </button>
+                <button type="button" onclick="selectNivel(2, 'Moderado (Entradas pronunciadas)')" class="nivel-btn bg-white border-2 border-transparent p-2 rounded-xl text-center shadow-sm hover:border-brandBlue transition flex flex-col items-center">
+                    <svg class="w-10 h-10 text-gray-600 mb-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 45 Q50 20 75 45" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
+                    <span class="text-xs font-bold text-gray-700">Nivel II</span>
+                </button>
+                <button type="button" onclick="selectNivel(3, 'Avanzado (Entradas y Coronilla)')" class="nivel-btn bg-white border-2 border-transparent p-2 rounded-xl text-center shadow-sm hover:border-brandBlue transition flex flex-col items-center">
+                    <svg class="w-10 h-10 text-gray-600 mb-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 55 Q50 15 75 55" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="50" cy="50" r="4" fill="currentColor"/></svg>
+                    <span class="text-xs font-bold text-gray-700">Nivel III</span>
+                </button>
+                <button type="button" onclick="selectNivel(4, 'Severo (Pérdida casi total)')" class="nivel-btn bg-white border-2 border-transparent p-2 rounded-xl text-center shadow-sm hover:border-brandBlue transition flex flex-col items-center">
+                    <svg class="w-10 h-10 text-gray-600 mb-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 70 Q50 20 75 70" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
+                    <span class="text-xs font-bold text-gray-700">Nivel IV</span>
+                </button>
+            </div>
+            <div id="selected-level-badge" class="hidden text-center bg-blue-100 text-brandBlue font-semibold text-xs py-1 px-3 rounded-full w-max mx-auto transition">
+                <span id="selected-level-name"></span>
+            </div>
+        </div>
+
+        <!-- FORMULARIO DE RESERVA -->
+        <div class="bg-white p-6 md:p-8 rounded-b-2xl custom-shadow">
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-1">
+                ¿Listo para agendar tu cita?
+            </h3>
+            <p class="text-center text-xs text-gray-500 mb-6">Te enviaremos a WhatsApp para confirmar los detalles directamente con nuestro equipo.</p>
+            
+            <form id="leadForm" onsubmit="handleSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1.5">Nombre Completo</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa-solid fa-user"></i></span>
+                        <input id="name-input" type="text" required placeholder="Ej. Carlos Mendoza" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-brandBlue transition text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1.5">Número de WhatsApp</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"><i class="fa-solid fa-phone"></i></span>
+                        <input id="phone-input" type="tel" required placeholder="Ej. 0414-1234567" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-brandBlue transition text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1.5">Día</label>
+                        <select id="date-select" class="w-full px-3 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-brandBlue bg-white transition text-sm">
+                            <option value="14 de Julio">Dom, 14 de Julio</option>
+                            <option value="15 de Julio">Lun, 15 de Julio</option>
+                            <option value="Indiferente">Cualquier día</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1.5">Horario</label>
+                        <select id="time-select" class="w-full px-3 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-brandBlue bg-white transition text-sm">
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="w-full gradient-bg hover:opacity-90 text-white font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 mt-6 active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span class="text-base tracking-wide">CONFIRMAR POR WHATSAPP</span>
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandDark text-gray-400 py-6 text-center text-xs mt-auto w-full">
+        <p class="mb-1">&copy; 2026 Tu Injerto Capilar.</p>
+        <p class="text-[10px] text-gray-500">Recuperando la confianza de pacientes en toda Venezuela.</p>
+    </footer>
+
+    <!-- LÓGICA DE JAVASCRIPT SIMPLIFICADA Y SEGURA -->
+    <script>
+        let alopeciaLevelSelected = "";
+
+        function selectNivel(nivel, nombreNivel) {
+            const botones = document.querySelectorAll('.nivel-btn');
+            botones.forEach(btn => {
+                btn.classList.remove('border-brandBlue', 'bg-blue-50/70', 'scale-105');
+                btn.classList.add('border-transparent', 'bg-white');
+            });
+
+            botones[nivel - 1].classList.remove('border-transparent', 'bg-white');
+            botones[nivel - 1].classList.add('border-brandBlue', 'bg-blue-50/70', 'scale-105');
+
+            alopeciaLevelSelected = nombreNivel;
+            document.getElementById('selected-level-badge').classList.remove('hidden');
+            document.getElementById('selected-level-name').innerText = `Seleccionaste: Nivel ${nivel}`;
+        }
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
+            // UI Feedback
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Conectando...';
+            btn.disabled = true;
+
+            // Recopilar Datos
+            const data = {
+                nombre: document.getElementById('name-input').value,
+                telefono: document.getElementById('phone-input').value,
+                dia: document.getElementById('date-select').value,
+                hora: document.getElementById('time-select').value,
+                nivel: alopeciaLevelSelected || 'No indicado',
+                fecha: new Date().toLocaleString('es-VE')
+            };
+
+            // 1. Guardar en Google Sheets silenciosamente (Opcional, ver tutorial abajo)
+            // Reemplaza esta URL por la tuya de Google Apps Script
+            const scriptURL = 'TU_WEBHOOK_DE_GOOGLE_SHEETS_AQUI'; 
+            
+            if (scriptURL !== 'TU_WEBHOOK_DE_GOOGLE_SHEETS_AQUI') {
+                try {
+                    await fetch(scriptURL, {
+                        method: 'POST',
+                        mode: 'no-cors', // Evita bloqueos de seguridad del navegador al enviar a Google
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                } catch (e) {
+                    console.log("Error silencioso al guardar en Google Sheets", e);
+                }
+            }
+
+            // 2. Redirigir a WhatsApp (La acción principal)
+            let mensaje = `Hola, quiero asistir a la jornada en Maracaibo (14-15 Jul).\n\n`;
+            mensaje += `*Nombre:* ${data.nombre}\n`;
+            mensaje += `*Teléfono:* ${data.telefono}\n`;
+            mensaje += `*Día:* ${data.dia} (${data.hora})\n`;
+            if (alopeciaLevelSelected) mensaje += `*Grado de alopecia:* ${alopeciaLevelSelected}\n`;
+
+            // Número del cliente
+            const nroTelefono = "584246553274"; 
+            
+            // Usamos location.href en vez de window.open para evitar bloqueos de Pop-ups en móviles
+            window.location.href = `https://wa.me/${nroTelefono}?text=${encodeURIComponent(mensaje)}`;
+            
+            // Restaurar botón (por si regresan atrás)
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
