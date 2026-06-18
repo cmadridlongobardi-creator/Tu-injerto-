@@ -268,9 +268,9 @@
 
             // 1. Guardar en Google Sheets silenciosamente (Opcional, ver tutorial abajo)
             // Reemplaza esta URL por la tuya de Google Apps Script
-            const scriptURL = 'TU_WEBHOOK_DE_GOOGLE_SHEETS_AQUI'; 
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby1NjKw5sHLWHaaSFwTy4XHNHr6ruggXLDIMj-P9MeoxuPwgq44ygG26fdPBbPfJcwl/exec'; 
             
-            if (scriptURL !== 'TU_WEBHOOK_DE_GOOGLE_SHEETS_AQUI') {
+            if (scriptURL !== 'https://script.google.com/macros/s/AKfycby1NjKw5sHLWHaaSFwTy4XHNHr6ruggXLDIMj-P9MeoxuPwgq44ygG26fdPBbPfJcwl/exec') {
                 try {
                     await fetch(scriptURL, {
                         method: 'POST',
