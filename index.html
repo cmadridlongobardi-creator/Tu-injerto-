@@ -234,7 +234,7 @@
         <p class="text-xs text-gray-500">Recuperando la confianza de pacientes en toda Venezuela.</p>
     </footer>
 
-    <!-- LÓGICA DE JAVASCRIPT CORREGIDA -->
+        <!-- LÓGICA DE JAVASCRIPT CORREGIDA -->
     <script>
         let alopeciaLevelSelected = "";
 
@@ -273,14 +273,24 @@
             };
 
             // 1. Guardar en Google Sheets silenciosamente
-            const scriptURL = 'https://script.google.com/macros/s/AKfycby1NjKw5sHLWHaaSFwTy4XHNHr6ruggXLDIMj-P9MeoxuPwgq44ygG26fdPBbPfJcwl/exec'; 
+            // ¡Esta es tu nueva URL oficial de la Versión 2!
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwTGkqgN8mU8nPxhe1X2ZE3xdf4dT8wP7Br1y-jLPqlr4pPlrr-mmw9w8P05xkXcr/exec'; 
             
+            // Formateamos los datos para que Google Sheets los acepte sin bloquearlos
+            const formData = new FormData();
+            formData.append('nombre', data.nombre);
+            formData.append('telefono', data.telefono);
+            formData.append('dia', data.dia);
+            formData.append('hora', data.hora);
+            formData.append('nivel', data.nivel);
+            formData.append('fecha', data.fecha);
+
             try {
-                await fetch(scriptURL, {
+                // Enviamos los datos. No usamos await para no hacer esperar al cliente
+                fetch(scriptURL, {
                     method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    body: formData,
+                    mode: 'no-cors'
                 });
             } catch (e) {
                 console.log("Error silencioso al guardar en Google Sheets", e);
@@ -303,6 +313,7 @@
             }, 2000);
         }
     </script>
+
 </body>
 </html>
 
