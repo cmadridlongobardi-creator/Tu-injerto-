@@ -51,7 +51,7 @@
     <!-- TOP BAR DE URGENCIA -->
     <div class="bg-red-500 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center sticky top-0 z-50 shadow-md flex items-center justify-center gap-2">
         <span class="inline-block w-2.5 h-2.5 bg-white rounded-full pulsing-dot"></span>
-        <span>¡ATENCIÓN MARACAIBO! Quedan pocos cupos para la jornada del 20 y 21 de Julio</span>
+        <span>¡ATENCIÓN MARACAIBO! Quedan pocos cupos para la jornada del 3 y 4 de Agosto</span>
     </div>
 
     <!-- MAIN CONTAINER -->
@@ -93,7 +93,7 @@
                 <div class="bg-white/10 backdrop-blur-sm p-4 md:p-5 rounded-xl border border-white/10">
                     <div class="text-brandBlue-light text-xl md:text-2xl mb-1"><i class="fa-solid fa-calendar-days"></i></div>
                     <div class="text-xs md:text-sm text-blue-100 uppercase font-semibold">¿Cuándo?</div>
-                    <div class="text-sm md:text-lg font-bold">20 y 21 de Julio</div>
+                    <div class="text-sm md:text-lg font-bold">3 y 4 de Agosto</div>
                 </div>
                 <div class="bg-white/10 backdrop-blur-sm p-4 md:p-5 rounded-xl border border-white/10">
                     <div class="text-brandBlue-light text-xl md:text-2xl mb-1"><i class="fa-solid fa-hospital"></i></div>
@@ -110,7 +110,6 @@
             <div class="bg-gray-100 p-6 md:p-8 rounded-2xl md:border border-gray-200 h-full flex flex-col justify-center">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center">Resultados Reales</h2>
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-300 bg-white group">
-                    <!-- Recuerda subir la imagen a GitHub como antes-despues.jpg -->
                     <img src="antes-despues.jpg" alt="Resultados Antes y Después" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 </div>
             </div>
@@ -203,8 +202,8 @@
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Día</label>
                             <select id="date-select" class="w-full px-4 py-3 md:py-4 border border-gray-200 rounded-xl focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 bg-white transition text-sm md:text-base">
-                                <option value="20 de Julio">Lun, 20 de Julio</option>
-                                <option value="21 de Julio">Mar, 21 de Julio</option>
+                                <option value="3 de Agosto">Sáb, 3 de Agosto</option>
+                                <option value="4 de Agosto">Dom, 4 de Agosto</option>
                                 <option value="Indiferente">Cualquier día</option>
                             </select>
                         </div>
@@ -285,7 +284,7 @@
             formData.append('fecha', data.fecha);
 
             try {
-                // Enviamos los datos. No usamos await para no hacer esperar al cliente
+                // Enviamos los datos sin await para no hacer esperar
                 fetch(scriptURL, {
                     method: 'POST',
                     body: formData,
@@ -296,7 +295,7 @@
             }
 
             // 2. Redirigir a WhatsApp
-            let mensaje = `Hola, quiero asistir a la jornada en Maracaibo (20-21 Jul).\n\n`;
+            let mensaje = `Hola, quiero asistir a la jornada en Maracaibo (3-4 Ago).\n\n`;
             mensaje += `*Nombre:* ${data.nombre}\n`;
             mensaje += `*Teléfono:* ${data.telefono}\n`;
             mensaje += `*Día:* ${data.dia} (${data.hora})\n`;
@@ -314,3 +313,4 @@
     </script>
 </body>
 </html>
+
