@@ -51,7 +51,7 @@
     <!-- TOP BAR DE URGENCIA -->
     <div class="bg-red-500 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center sticky top-0 z-50 shadow-md flex items-center justify-center gap-2">
         <span class="inline-block w-2.5 h-2.5 bg-white rounded-full pulsing-dot"></span>
-        <span>¡ATENCIÓN MARACAIBO! Quedan pocos cupos para la jornada del 14 y 15 de Julio</span>
+        <span>¡ATENCIÓN MARACAIBO! Quedan pocos cupos para la jornada del 20 y 21 de Julio</span>
     </div>
 
     <!-- MAIN CONTAINER -->
@@ -103,14 +103,14 @@
             </div>
         </div>
 
-        <!-- GRID 1: RESULTADOS Y BENEFICIOS (2 Columnas en PC) -->
+        <!-- GRID 1: RESULTADOS Y BENEFICIOS -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6 mt-6 md:mt-8">
             
             <!-- SECCIÓN DE PRUEBA SOCIAL -->
             <div class="bg-gray-100 p-6 md:p-8 rounded-2xl md:border border-gray-200 h-full flex flex-col justify-center">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center">Resultados Reales</h2>
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-300 bg-white group">
-                    <!-- Aquí se llama a la imagen. Recuerda subirla a GitHub como antes-despues.jpg -->
+                    <!-- Recuerda subir la imagen a GitHub como antes-despues.jpg -->
                     <img src="antes-despues.jpg" alt="Resultados Antes y Después" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 </div>
             </div>
@@ -202,9 +202,6 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Día</label>
-                                                <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Día</label>
                             <select id="date-select" class="w-full px-4 py-3 md:py-4 border border-gray-200 rounded-xl focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 bg-white transition text-sm md:text-base">
                                 <option value="20 de Julio">Lun, 20 de Julio</option>
                                 <option value="21 de Julio">Mar, 21 de Julio</option>
@@ -219,7 +216,6 @@
                             </select>
                         </div>
                     </div>
-
 
                     <button type="submit" id="submitBtn" class="w-full gradient-bg hover:opacity-90 text-white font-bold py-4 md:py-5 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 mt-8 hover:-translate-y-1 active:translate-y-0">
                         <i class="fa-brands fa-whatsapp text-xl md:text-2xl"></i>
@@ -238,7 +234,7 @@
         <p class="text-xs text-gray-500">Recuperando la confianza de pacientes en toda Venezuela.</p>
     </footer>
 
-        <!-- LÓGICA DE JAVASCRIPT CORREGIDA -->
+    <!-- LÓGICA DE JAVASCRIPT CORREGIDA -->
     <script>
         let alopeciaLevelSelected = "";
 
@@ -277,7 +273,6 @@
             };
 
             // 1. Guardar en Google Sheets silenciosamente
-            // ¡Esta es tu nueva URL oficial de la Versión 2!
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwTGkqgN8mU8nPxhe1X2ZE3xdf4dT8wP7Br1y-jLPqlr4pPlrr-mmw9w8P05xkXcr/exec'; 
             
             // Formateamos los datos para que Google Sheets los acepte sin bloquearlos
@@ -317,8 +312,5 @@
             }, 2000);
         }
     </script>
-
 </body>
 </html>
-
-
