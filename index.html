@@ -54,7 +54,7 @@
         <span>¡ATENCIÓN MARACAIBO! Quedan pocos cupos para la jornada del 14 y 15 de Julio</span>
     </div>
 
-    <!-- MAIN CONTAINER (Ahora mucho más ancho en PC) -->
+    <!-- MAIN CONTAINER -->
     <main class="max-w-md md:max-w-4xl lg:max-w-5xl mx-auto my-6 px-4 w-full flex-grow">
         
         <!-- HEADER -->
@@ -107,20 +107,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6 mt-6 md:mt-8">
             
             <!-- SECCIÓN DE PRUEBA SOCIAL -->
-            <div class="bg-gray-100 p-6 md:p-8 rounded-2xl md:border border-gray-200 h-full">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2 text-center">Resultados Reales</h2>
-                <p class="text-center text-xs md:text-sm text-gray-500 mb-5"></p>
-                <div class="grid grid-cols-2 gap-3 h-32 md:h-48">
-                    <!-- FOTO 1 -->
-                    <div class="bg-gray-300 rounded-xl flex items-center justify-center overflow-hidden relative shadow-inner h-full">
-                        <span class="text-gray-500 text-xs md:text-sm font-bold z-10 text-center px-2">FOTO ANTES/DESPUÉS</span>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-                    <!-- FOTO 2 -->
-                    <div class="bg-gray-300 rounded-xl flex items-center justify-center overflow-hidden relative shadow-inner h-full">
-                        <span class="text-gray-500 text-xs md:text-sm font-bold z-10 text-center px-2">FOTO ANTES/DESPUÉS</span>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
+            <div class="bg-gray-100 p-6 md:p-8 rounded-2xl md:border border-gray-200 h-full flex flex-col justify-center">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center">Resultados Reales</h2>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-300 bg-white group">
+                    <!-- Aquí se llama a la imagen. Recuerda subirla a GitHub como antes-despues.jpg -->
+                    <img src="antes-despues.jpg" alt="Resultados Antes y Después" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
                 </div>
             </div>
 
@@ -140,8 +131,8 @@
                     <div class="flex items-start gap-4">
                         <div class="bg-blue-50 text-brandBlue p-3 rounded-xl"><i class="fa-solid fa-calculator text-lg"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-800 text-sm md:text-base">Asesoramiento y presupuesto </h4>
-                            <p class="text-xs md:text-sm text-gray-600 mt-1"> Aclaramos tus dudas y conoceras nuestras formas de pago.</p>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">Asesoramiento y Presupuesto</h4>
+                            <p class="text-xs md:text-sm text-gray-600 mt-1">Aclaramos tus dudas y conocerás nuestras formas de pago.</p>
                         </div>
                     </div>
                 </div>
@@ -149,7 +140,7 @@
 
         </div>
 
-        <!-- GRID 2: DIAGNÓSTICO Y FORMULARIO (2 Columnas en PC) -->
+        <!-- GRID 2: DIAGNÓSTICO Y FORMULARIO -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-6 mt-6 md:mt-8">
             
             <!-- HERRAMIENTA INTERACTIVA -->
@@ -158,25 +149,21 @@
                 <h2 class="text-lg md:text-xl font-bold text-gray-800 text-center mb-6">Selecciona tu nivel aproximado de calvicie:</h2>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3 mb-6" id="alopecia-selector">
-                    <!-- Nivel 1 -->
                     <button type="button" onclick="selectNivel(1, 'Leve (Entradas)')" class="nivel-btn bg-white border-2 border-transparent p-3 rounded-xl text-center shadow-sm hover:border-brandBlue hover:shadow-md transition flex flex-col items-center">
                         <svg class="w-12 h-12 text-gray-600 mb-2" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 35 Q50 35 75 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><path d="M25 45 Q50 30 75 45" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>
                         <span class="text-sm font-bold text-gray-700">Nivel I</span>
                         <span class="text-[10px] text-gray-500 mt-0.5">Entradas leves</span>
                     </button>
-                    <!-- Nivel 2 -->
                     <button type="button" onclick="selectNivel(2, 'Moderado (Entradas pronunciadas)')" class="nivel-btn bg-white border-2 border-transparent p-3 rounded-xl text-center shadow-sm hover:border-brandBlue hover:shadow-md transition flex flex-col items-center">
                         <svg class="w-12 h-12 text-gray-600 mb-2" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 45 Q50 20 75 45" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
                         <span class="text-sm font-bold text-gray-700">Nivel II</span>
                         <span class="text-[10px] text-gray-500 mt-0.5">Pronunciadas</span>
                     </button>
-                    <!-- Nivel 3 -->
                     <button type="button" onclick="selectNivel(3, 'Avanzado (Entradas y Coronilla)')" class="nivel-btn bg-white border-2 border-transparent p-3 rounded-xl text-center shadow-sm hover:border-brandBlue hover:shadow-md transition flex flex-col items-center">
                         <svg class="w-12 h-12 text-gray-600 mb-2" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 55 Q50 15 75 55" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="50" cy="50" r="4" fill="currentColor"/></svg>
                         <span class="text-sm font-bold text-gray-700">Nivel III</span>
                         <span class="text-[10px] text-gray-500 mt-0.5">Coronilla</span>
                     </button>
-                    <!-- Nivel 4 -->
                     <button type="button" onclick="selectNivel(4, 'Severo (Pérdida casi total)')" class="nivel-btn bg-white border-2 border-transparent p-3 rounded-xl text-center shadow-sm hover:border-brandBlue hover:shadow-md transition flex flex-col items-center">
                         <svg class="w-12 h-12 text-gray-600 mb-2" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4"/><path d="M25 70 Q50 20 75 70" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
                         <span class="text-sm font-bold text-gray-700">Nivel IV</span>
@@ -216,8 +203,8 @@
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Día</label>
                             <select id="date-select" class="w-full px-4 py-3 md:py-4 border border-gray-200 rounded-xl focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 bg-white transition text-sm md:text-base">
-                                <option value="14 de Julio">Dom, 14 de Julio</option>
-                                <option value="15 de Julio">Lun, 15 de Julio</option>
+                                <option value="20 de Julio">Sáb, 20 de Julio</option>
+                                <option value="21 de Julio">Dom, 21 de Julio</option>
                                 <option value="Indiferente">Cualquier día</option>
                             </select>
                         </div>
@@ -300,7 +287,7 @@
             }
 
             // 2. Redirigir a WhatsApp
-            let mensaje = `Hola, quiero asistir a la jornada en Maracaibo (14-15 Jul).\n\n`;
+            let mensaje = `Hola, quiero asistir a la jornada en Maracaibo (20-21 Jul).\n\n`;
             mensaje += `*Nombre:* ${data.nombre}\n`;
             mensaje += `*Teléfono:* ${data.telefono}\n`;
             mensaje += `*Día:* ${data.dia} (${data.hora})\n`;
@@ -318,4 +305,5 @@
     </script>
 </body>
 </html>
+
 
